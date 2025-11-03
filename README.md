@@ -150,7 +150,7 @@ Regras:
 - Documente limitações conhecidas
 
 ## Licença
-Defina e atualize a licença do repositório conforme a sua necessidade (ex.: MIT, CC BY 4.0). Até definição explícita, considere o conteúdo como não licenciado para uso comercial.
+MIT
 
 ## Recursos úteis
 - Modelo C4 de exemplo: `prompts/engineering/architecture/generate-c4.md`
