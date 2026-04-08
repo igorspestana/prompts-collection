@@ -5,22 +5,7 @@ author: "<autor>"
 last_updated: "2025-01-27"
 tags: ["engineering", "code-review", "pull-request", "qualidade", "documentação"]
 target_models: ["gpt-4o", "gpt-5"]
-inputs:
-  - name: "branch_base"
-    required: true
-    description: "Branch base para comparação (ex.: main)"
-  - name: "branch_alvo"
-    required: false
-    description: "Branch alvo para revisão; padrão é HEAD atual"
-  - name: "contexto"
-    required: false
-    description: "Resumo do problema/issue/objetivo do PR. Recomendado para revisão mais precisa: permite avaliar se o código atende aos requisitos declarados. Se não fornecido, a revisão será baseada apenas no diff e padrões de código."
-  - name: "arquivo_analise"
-    required: false
-    description: "Caminho para arquivo de análise/documentação prévia (ex.: docs/changes/<branch>.md gerado pelo analyze-branch.md)"
-  - name: "arquivo_saida"
-    required: false
-    description: "Caminho do arquivo Markdown de saída (ex.: docs/pr/<branch>.md)"
+
 ---
 
 PROMPT: Revisão Técnica de Pull Request (PR)
