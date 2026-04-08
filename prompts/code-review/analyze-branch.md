@@ -1,15 +1,5 @@
 ---
-title: "Análise de Mudanças da Branch Atual"
-description: "Gera documentação técnica e estruturada das alterações desta branch para estudo e registro das mudanças."
-author: "<autor>"
-last_updated: "2025-01-27"
-tags: ["engineering", "code-review", "diff", "documentação", "branch-analysis"]
-target_models: ["gpt-4o", "gpt-5"]
-inputs:
-  - name: "branch_base"
-    required: true
-    description: "Branch base para comparação (ex.: main)"
-  - name: "branch_alvo"
+1111111111111111111
     required: false
     description: "Branch alvo para análise; padrão é HEAD atual"
   - name: "contexto"
