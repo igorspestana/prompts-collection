@@ -1,0 +1,113 @@
+1. Entenda o objetivo do PR: <número-ou-url-do-pr> (usado pelo `gh pr view`)
+2. Leia a descrição da tarefa/issue
+3. Confirme se a solução resolve o problema corretamente
+4. Valide as regras de negócio implementadas
+5. Procure bugs lógicos
+6. Verifique edge cases
+7. Valide o tratamento de `null` / `Optional`
+8. Revise condicionais e comparações
+9. Verifique risco de `NullPointerException`
+10. Confira o tratamento de exceptions
+11. Garanta que exceptions não estão sendo ignoradas
+12. Valide mensagens e logs de erro
+13. Revise a separação de responsabilidades
+14. Verifique a arquitetura em camadas
+15. Garanta que Controllers estejam simples
+16. Garanta que regras estejam no Service
+17. Garanta que Repository apenas acesse dados
+18. Verifique acoplamento excessivo
+19. Identifique código duplicado
+20. Revise reutilização de código
+21. Avalie clareza e legibilidade
+22. Revise nomes de variáveis
+23. Revise nomes de métodos
+24. Revise nomes de classes
+25. Verifique métodos muito grandes
+26. Verifique classes/componentes gigantes
+27. Revise complexidade excessiva
+28. Identifique overengineering
+29. Avalie a necessidade das abstrações
+30. Verifique consistência com o padrão do projeto
+31. Confira organização de arquivos/pacotes
+32. Valide o uso correto de DTOs
+33. Garanta que Entities não sejam expostas diretamente
+34. Revise mapeamentos DTO ↔ Entity
+35. Revise o uso de Lombok
+36. Valide `equals` e `hashCode`
+37. Revise imutabilidade (`final`)
+38. Verifique mutações desnecessárias
+39. Revise Streams API
+40. Verifique streams complexas demais
+41. Avalie se loops simples seriam melhores
+42. Revise concorrência/thread safety
+43. Valide o uso de singleton/shared state
+44. Revise collections thread-safe
+45. Confira o uso correto de `@Transactional`
+46. Garanta transações no lugar correto
+47. Revise queries JPA/Hibernate
+48. Procure problema de N+1 query
+49. Valide paginação em consultas grandes
+50. Revise fetch EAGER/LAZY
+51. Procure `LazyInitializationException`
+52. Verifique performance de banco
+53. Revise índices/consultas pesadas
+54. Verifique loops desnecessários
+55. Revise renders/chamadas duplicadas
+56. Avalie consumo de memória
+57. Procure gargalos reais de performance
+58. Revise validação de inputs
+59. Garanta sanitização de dados
+60. Revise autenticação
+61. Revise autorização/permissões
+62. Procure vulnerabilidades (XSS, SQL Injection etc.)
+63. Verifique secrets hardcoded
+64. Garanta que dados sensíveis não apareçam em logs
+65. Revise configurações (`application.yml/properties`)
+66. Verifique variáveis de ambiente
+67. Revise timeout/retry
+68. Garanta fallbacks adequados
+69. Revise observabilidade/logs
+70. Verifique métricas e rastreamento
+71. Revise cobertura de testes
+72. Valide testes unitários
+73. Valide testes de integração
+74. Confira cenários negativos nos testes
+75. Verifique mocks excessivos
+76. Garanta consistência de estilo/lint
+77. Revise documentação/comentários necessários
+78. Identifique débitos técnicos criados
+79. Avalie impacto em UX
+80. Revise acessibilidade quando aplicável
+81. Garanta simplicidade da solução
+82. Pergunte: “isso pode ser simplificado?”
+83. Pergunte: “isso escala?”
+84. Pergunte: “isso é fácil de manter?”
+85. Pergunte: “o que acontece se falhar?”
+86. Pergunte: “isso pode quebrar algo existente?”
+87. Verifique backward compatibility
+88. Revise dependências adicionadas
+89. Confira versionamento e compatibilidade
+90. Garanta que o código esteja claro, seguro, performático e sustentável.
+91. Avalie o design da solução
+92. Verifique coesão entre classes e módulos
+93. Verifique baixo acoplamento
+94. Garanta responsabilidade única (SRP)
+95. Avalie extensibilidade da solução
+96. Verifique reutilização adequada
+97. Evite abstrações prematuras
+98. Garanta simplicidade no design
+99. Avalie se o fluxo está intuitivo
+100. Verifique organização lógica do domínio
+101. Garanta separação clara entre domínio, infraestrutura e aplicação
+102. Avalie se o design facilita manutenção futura
+103. Verifique aderência aos princípios SOLID
+104. Avalie encapsulamento adequado
+105. Verifique dependências desnecessárias
+106. Garanta que o design não esteja superengenheirado
+107. Avalie se o design suporta evolução futura
+108. Verifique clareza na modelagem de entidades e objetos
+109. Garanta consistência arquitetural
+110. Avalie se a solução está adequada à complexidade do problema
+111. Avalie se a solução é over-engineering
+112. Avalie se existe repetição de código, possibilidade de utilizar enum e código legível 
+113. Avalie se a solução tem boa modularidade, acoplamento controlado entre componentes

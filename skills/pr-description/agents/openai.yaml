@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Description"
+  short_description: "Analisa a branch e gera documento de problema/solução/testes."
+  default_prompt: "Use $pr-description para gerar um documento da branch com problema, solução, testes e resultados."

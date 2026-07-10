@@ -1,0 +1,13 @@
+# PR Summary
+- Identificador: <numero-ou-url>
+- Título: <title>
+- Autor: <author>
+- Base: <baseRefName>
+- Head: <headRefName>
+- Labels: <labels>
+- Objetivo resumido: <1 frase objetiva>
+- Arquivos alterados:
+  - <path1>
+  - <path2>
+- Comentários e reviews relevantes:
+  - <resumo curto>

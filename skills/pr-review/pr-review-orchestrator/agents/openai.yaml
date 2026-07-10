@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Review Orchestrator"
+  short_description: "Orquestra branch analysis e PR review em fluxo sequencial."
+  default_prompt: "Execute branch-analyzer e pr-reviewer em ordem obrigatória usando branch-analysis.md como contexto."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Splitter"
+  short_description: "Divide branches grandes em PRs menores com plano empilhado."
+  default_prompt: "Use pr-splitter para planejar ou executar o split de uma branch grande em PRs menores e empilhados."

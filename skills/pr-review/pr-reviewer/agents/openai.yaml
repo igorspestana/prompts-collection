@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Reviewer"
+  short_description: "Revisa PR pelo diff e gera relatório técnico acionável."
+  default_prompt: "Revise o PR e gere docs/pr/<branch>/pr-review.md."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Reply Comments"
+  short_description: "Rascunha comentários inline de review"
+  default_prompt: "Use $review-reply-comments para transformar achados de review em comentários inline não publicados, com Conventional Comments, tom colaborativo e indicação explícita de arquivo e linha."

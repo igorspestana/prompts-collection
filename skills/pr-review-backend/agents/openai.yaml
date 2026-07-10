@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Review Backend"
+  short_description: "Revisa PRs usando a checklist de review.txt a partir do objetivo do PR."
+  default_prompt: "Use $pr-review-backend para revisar um PR. Exija apenas número ou URL do PR, obtenha o contexto via gh pr view antes de analisar qualquer outra coisa, salve um resumo auxiliar do PR no caminho padrão, e aplique a checklist de review.txt ao contexto do GitHub e aos arquivos do projeto."

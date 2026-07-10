@@ -1,9 +1,9 @@
 # Prompts Collection
 
-Repositório para reunir prompts curados e reutilizáveis para diversos usos (engenharia de software, produto, design, dados, marketing, escrita, etc.). O objetivo é padronizar, documentar e facilitar a descoberta e evolução desses prompts.
+Repositório para reunir prompts e agent skills curados e reutilizáveis para diversos usos (engenharia de software, produto, design, dados, marketing, escrita, etc.). O objetivo é padronizar, documentar e facilitar a descoberta e evolução desses artefatos.
 
 ## Objetivos
-- Manter prompts úteis organizados por contexto e finalidade
+- Manter prompts e skills úteis organizados por contexto e finalidade
 - Padronizar estrutura, nomenclatura e metadados
 - Facilitar contribuição e revisão
 - Promover reuso e versionamento evolutivo
@@ -15,7 +15,6 @@ Repositório para reunir prompts curados e reutilizáveis para diversos usos (en
 ├─ prompts/
 │  ├─ engineering/
 │  │  ├─ architecture/
-│  │  │  └─ generate-c4.md        # Exemplo de prompt já existente
 │  │  ├─ code-review/
 │  │  ├─ refactoring/
 │  │  └─ debugging/
@@ -24,12 +23,14 @@ Repositório para reunir prompts curados e reutilizáveis para diversos usos (en
 │  ├─ data-ml/
 │  ├─ marketing-seo/
 │  └─ writing/
+├─ skills/
 └─ templates/
    └─ prompt-template.md         # Modelo para novos prompts
 ```
 
 - Coloque novos prompts dentro de `prompts/<categoria>/`.
-- Use nomes de arquivo descritivos em `kebab-case` (ex.: `feature-spec-outline.md`).
+- Coloque novas skills dentro de `skills/<nome-da-skill>/` (ou em um grupo, como `skills/pr-review/`).
+- Use nomes de arquivo e pastas descritivos em `kebab-case` (ex.: `feature-spec-outline.md`, `pr-description/`).
 
 ## Recomendações para organização em projetos
 
@@ -47,10 +48,34 @@ my-app/
 └─ src/
 ```
 
+## Skills
+
+Agent skills em `skills/` para fluxos de PR, review e handoff técnico. Cada skill vive em uma pasta com `SKILL.md` (e, quando necessário, `agents/`, `assets/`, `references/` e `scripts/`).
+
+| Skill | Caminho | Uso |
+| --- | --- | --- |
+| PR Description | `skills/pr-description/` | Gera descrição técnica da branch (problema, solução, testes, resultados) |
+| PR Plan | `skills/pr-plan/` | Planeja divisão de feature/tarefa em PRs pequenos antes de implementar |
+| Branch Analyzer | `skills/pr-review/branch-analyzer/` | Documenta mudanças da branch em relação à base |
+| PR Reviewer | `skills/pr-review/pr-reviewer/` | Review técnico pré-merge com riscos e recomendações |
+| PR Review Orchestrator | `skills/pr-review/pr-review-orchestrator/` | Orquestra branch-analyzer + pr-reviewer ponta a ponta |
+| PR Review Backend | `skills/pr-review-backend/` | Review de PR backend com checklist e contexto via `gh` |
+| PR Review Frontend | `skills/pr-review-frontend/` | Review de PR frontend (UI/UX, a11y, responsividade) |
+| PR Splitter | `skills/pr-splitter/` | Divide branch grande já implementada em PRs menores |
+| Review Reply Comments | `skills/review-reply-comments/` | Rascunhos de comentários inline (Conventional Comments) |
+
+Para usar: abra o `SKILL.md` da skill desejada (ou aponte o agente para ela) e siga as entradas e o workflow descritos.
+
 ## Como usar
+### Prompts
 1. Navegue pelas categorias em `prompts/`.
 2. Abra o arquivo `.md` do prompt desejado.
 3. Copie e adapte conforme o seu contexto (edite as variáveis entre `< >` ou blocos YAML).
+
+### Skills
+1. Navegue por `skills/`.
+2. Abra o `SKILL.md` da skill desejada.
+3. Informe as entradas pedidas (branch, PR, contexto) e execute o workflow.
 
 ## Metadados (Frontmatter)
 Inclua metadados para facilitar busca e manutenção.
@@ -151,10 +176,6 @@ Regras:
 
 ## Licença
 MIT
-
-## Recursos úteis
-- Modelo C4 de exemplo: `prompts/engineering/architecture/generate-c4.md`
-- Padrão Conventional Commits: `https://www.conventionalcommits.org/`
 
 ---
 

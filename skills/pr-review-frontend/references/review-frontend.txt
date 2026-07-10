@@ -1,0 +1,334 @@
+1. Entenda o objetivo do PR:
+2. Leia a descrição da tarefa/issue
+3. Confirme se a solução resolve o problema corretamente
+4. Valide o fluxo esperado do usuário
+5. Verifique se a mudança faz sentido para a experiência proposta
+6. Teste mentalmente os principais cenários de uso
+7. Procure bugs lógicos na interface
+8. Verifique edge cases
+9. Valide estados vazios
+10. Valide estados de carregamento
+11. Valide estados de erro
+12. Valide estados de sucesso
+13. Verifique comportamento com dados `null` / `undefined`
+14. Verifique uso seguro de optional chaining
+15. Garanta que a UI não quebre com dados incompletos
+16. Verifique condicionais de renderização
+17. Revise comparações e regras condicionais
+18. Confira se não há renderização indevida de conteúdo
+19. Valide se o componente funciona com diferentes permissões
+20. Valide se o componente funciona com diferentes perfis de usuário
+21. Verifique se o comportamento está consistente com o restante do produto
+22. Revise a separação de responsabilidades
+23. Garanta que componentes não concentrem regra de negócio excessiva
+24. Garanta que hooks não estejam fazendo coisas demais
+25. Garanta que funções utilitárias estejam fora do componente quando fizer sentido
+26. Verifique se componentes estão coesos
+27. Verifique se há acoplamento excessivo entre componentes
+28. Revise reutilização de componentes existentes
+29. Identifique código duplicado
+30. Avalie se a nova abstração é realmente necessária
+31. Identifique overengineering
+32. Garanta simplicidade da solução
+33. Pergunte: “isso poderia ser mais simples?”
+34. Verifique consistência com os padrões do projeto
+35. Confira organização de arquivos e pastas
+36. Valide nomes de arquivos
+37. Valide nomes de componentes
+38. Valide nomes de hooks
+39. Valide nomes de funções
+40. Valide nomes de variáveis
+41. Verifique clareza e legibilidade
+42. Verifique componentes muito grandes
+43. Verifique funções muito grandes
+44. Verifique hooks muito grandes
+45. Revise complexidade excessiva
+46. Avalie se a lógica deveria ser extraída
+47. Avalie se a UI deveria ser quebrada em componentes menores
+48. Garanta responsabilidade única dos componentes
+49. Verifique se o componente é fácil de testar
+50. Verifique se o componente é fácil de manter
+51. Revise o uso de props
+52. Verifique props desnecessárias
+53. Verifique props com nomes ambíguos
+54. Verifique prop drilling excessivo
+55. Avalie se Context API é realmente necessária
+56. Avalie se estado global é realmente necessário
+57. Verifique uso correto de estado local
+58. Verifique uso correto de estado global
+59. Verifique se estados derivados estão sendo duplicados
+60. Evite estado desnecessário
+61. Revise uso de `useState`
+62. Revise uso de `useEffect`
+63. Verifique dependências do `useEffect`
+64. Procure efeitos colaterais desnecessários
+65. Verifique se `useEffect` está sendo usado para algo que poderia ser derivado
+66. Revise uso de `useMemo`
+67. Revise uso de `useCallback`
+68. Garanta que memoização não foi usada prematuramente
+69. Verifique stale closures
+70. Verifique risco de loops infinitos de renderização
+71. Verifique renderizações desnecessárias
+72. Revise componentes que re-renderizam com frequência
+73. Verifique chaves (`key`) em listas
+74. Garanta que `key` não usa índice quando isso puder causar bugs
+75. Verifique listas grandes e impacto de performance
+76. Avalie necessidade de virtualização em listas grandes
+77. Revise filtros, ordenações e buscas no frontend
+78. Verifique debounce/throttle quando aplicável
+79. Verifique chamadas duplicadas para APIs
+80. Verifique chamadas feitas em momentos errados
+81. Revise integração com APIs
+82. Valide tratamento de erros de API
+83. Valide mensagens de erro para o usuário
+84. Valide retry quando aplicável
+85. Valide fallback quando aplicável
+86. Verifique timeout quando aplicável
+87. Garanta que loading não fica preso
+88. Garanta que erro não quebra a página inteira
+89. Verifique uso correto de `try/catch`
+90. Garanta que erros não são silenciosamente ignorados
+91. Valide logs úteis em desenvolvimento
+92. Garanta que dados sensíveis não aparecem em logs
+93. Verifique uso de variáveis de ambiente
+94. Garanta que secrets não estão no frontend
+95. Verifique uso correto de variáveis públicas do Next.js
+96. Valide `NEXT_PUBLIC_` apenas quando o dado puder ser exposto
+97. Revise autenticação
+98. Revise autorização no frontend
+99. Garanta que permissões não dependem apenas do frontend
+100. Verifique ocultação correta de ações não permitidas
+101. Verifique proteção de rotas
+102. Verifique redirecionamentos de usuários não autenticados
+103. Verifique redirecionamentos de usuários sem permissão
+104. Valide comportamento após sessão expirada
+105. Revise segurança contra XSS
+106. Verifique uso perigoso de `dangerouslySetInnerHTML`
+107. Garanta sanitização de conteúdo HTML externo
+108. Verifique manipulação segura de URLs
+109. Verifique abertura segura de links externos
+110. Use `rel="noopener noreferrer"` quando aplicável
+111. Verifique se dados do usuário são escapados corretamente
+112. Verifique exposição indevida de dados sensíveis na UI
+113. Revise formulários
+114. Valide campos obrigatórios
+115. Valide mensagens de erro de formulário
+116. Valide máscaras e formatos
+117. Valide limites de caracteres
+118. Valide envio com Enter quando aplicável
+119. Valide botões desabilitados durante submissão
+120. Evite duplo submit
+121. Garanta feedback após submissão
+122. Verifique comportamento ao cancelar uma ação
+123. Verifique comportamento ao editar dados existentes
+124. Verifique comportamento ao remover dados
+125. Verifique confirmação para ações destrutivas
+126. Valide acessibilidade de formulários
+127. Garanta uso correto de `label`
+128. Garanta associação entre `label` e input
+129. Verifique navegação por teclado
+130. Verifique foco inicial quando aplicável
+131. Verifique gerenciamento de foco em modais
+132. Verifique fechamento de modal com Escape quando aplicável
+133. Verifique acessibilidade de botões
+134. Evite `div` clicável sem semântica adequada
+135. Use elementos semânticos quando possível
+136. Verifique textos alternativos em imagens
+137. Verifique contraste visual
+138. Verifique legibilidade em diferentes tamanhos de tela
+139. Verifique responsividade mobile
+140. Verifique responsividade tablet
+141. Verifique responsividade desktop
+142. Verifique comportamento em telas muito pequenas
+143. Verifique quebra de texto longo
+144. Verifique overflow horizontal
+145. Verifique alinhamentos e espaçamentos
+146. Verifique consistência visual com o design system
+147. Garanta uso correto dos componentes do design system
+148. Evite estilos duplicados ou fora do padrão
+149. Verifique uso consistente de tokens de design
+150. Verifique estados visuais de hover
+151. Verifique estados visuais de focus
+152. Verifique estados visuais de disabled
+153. Verifique estados visuais de active/selected
+154. Valide feedback visual de ações
+155. Verifique microinterações quando aplicável
+156. Verifique se animações não prejudicam usabilidade
+157. Verifique se animações não prejudicam performance
+158. Revise CSS/SCSS/CSS-in-JS
+159. Verifique classes não utilizadas
+160. Verifique estilos globais indevidos
+161. Verifique conflitos de CSS
+162. Verifique especificidade excessiva
+163. Verifique uso incorreto de `!important`
+164. Verifique consistência em Tailwind, CSS Modules ou solução usada no projeto
+165. Revise imagens
+166. Verifique uso de `next/image` quando aplicável
+167. Verifique tamanho e otimização de imagens
+168. Verifique `alt` adequado
+169. Verifique prioridade de imagens acima da dobra
+170. Verifique lazy loading quando aplicável
+171. Revise fontes
+172. Verifique carregamento eficiente de fontes
+173. Evite layout shift causado por fontes
+174. Revise performance de carregamento
+175. Verifique impacto no bundle
+176. Verifique dependências adicionadas
+177. Avalie se a dependência nova é necessária
+178. Verifique tamanho da dependência
+179. Verifique compatibilidade da dependência com React/Next
+180. Verifique se há alternativa já existente no projeto
+181. Revise imports
+182. Remova imports não utilizados
+183. Evite imports pesados desnecessários
+184. Verifique tree-shaking quando aplicável
+185. Revise code splitting
+186. Verifique lazy loading de componentes pesados
+187. Verifique uso correto de componentes client/server no Next.js
+188. Garanta que `"use client"` só está onde precisa
+189. Evite transformar componentes em client components sem necessidade
+190. Verifique se Server Components não usam APIs do browser
+191. Verifique se Client Components não recebem dados não serializáveis
+192. Revise data fetching no Next.js
+193. Valide uso correto de `fetch`
+194. Valide cache/revalidate quando aplicável
+195. Verifique se dados dinâmicos não estão sendo cacheados indevidamente
+196. Verifique se dados estáticos não estão sendo buscados repetidamente
+197. Revise uso de Server Actions quando aplicável
+198. Revise uso de Route Handlers quando aplicável
+199. Verifique tratamento de erros em rotas
+200. Verifique status codes corretos em respostas
+201. Revise páginas e layouts
+202. Verifique uso correto de `layout.tsx`
+203. Verifique uso correto de `page.tsx`
+204. Verifique uso correto de `loading.tsx`
+205. Verifique uso correto de `error.tsx`
+206. Verifique uso correto de `not-found.tsx`
+207. Garanta fallback adequado para páginas não encontradas
+208. Valide metadados da página
+209. Verifique título da página
+210. Verifique descrição da página
+211. Verifique SEO quando aplicável
+212. Verifique Open Graph quando aplicável
+213. Verifique URLs canônicas quando aplicável
+214. Verifique internacionalização quando aplicável
+215. Verifique textos hardcoded
+216. Verifique pluralização
+217. Verifique formatação de datas
+218. Verifique formatação de moedas
+219. Verifique formatação de números
+220. Verifique timezone quando aplicável
+221. Verifique consistência de idioma
+222. Verifique se textos seguem tom do produto
+223. Revise UX writing
+224. Garanta mensagens claras e acionáveis
+225. Evite mensagens técnicas para usuário final
+226. Verifique testes adicionados ou atualizados
+227. Valide testes unitários
+228. Valide testes de componentes
+229. Valide testes de hooks
+230. Valide testes de integração
+231. Valide testes end-to-end quando aplicável
+232. Verifique cenários negativos nos testes
+233. Verifique testes de loading
+234. Verifique testes de erro
+235. Verifique testes de estados vazios
+236. Verifique testes de permissões
+237. Evite mocks excessivos
+238. Garanta que testes validem comportamento, não implementação
+239. Verifique snapshots desnecessários
+240. Verifique cobertura de acessibilidade quando aplicável
+241. Rode mentalmente o fluxo principal
+242. Verifique regressões em fluxos existentes
+243. Verifique backward compatibility
+244. Verifique impacto em outras páginas
+245. Verifique impacto em componentes compartilhados
+246. Verifique impacto em usuários existentes
+247. Verifique migrações de dados quando aplicável
+248. Verifique feature flags quando aplicável
+249. Verifique se a feature flag está no lugar correto
+250. Verifique comportamento com feature flag ligada
+251. Verifique comportamento com feature flag desligada
+252. Verifique analytics/event tracking quando aplicável
+253. Garanta que eventos não disparam duplicados
+254. Verifique nomes dos eventos de analytics
+255. Verifique dados enviados em eventos
+256. Garanta que dados sensíveis não são enviados para analytics
+257. Revise observabilidade frontend
+258. Verifique captura de erros no client
+259. Verifique integração com ferramentas de monitoramento
+260. Verifique breadcrumbs/contexto de erro quando aplicável
+261. Verifique console errors
+262. Verifique console warnings
+263. Verifique problemas de hidratação
+264. Verifique diferenças entre server render e client render
+265. Verifique uso de APIs como `window`, `document` e `localStorage`
+266. Garanta que APIs do browser só rodam no client
+267. Verifique comportamento em refresh da página
+268. Verifique comportamento ao voltar/avançar no navegador
+269. Verifique query params
+270. Verifique estado refletido na URL quando aplicável
+271. Verifique navegação com `next/link`
+272. Verifique redirecionamentos com `redirect`/`router`
+273. Evite navegação desnecessária via JavaScript
+274. Verifique prefetch quando aplicável
+275. Verifique tratamento de rotas dinâmicas
+276. Verifique slugs e parâmetros inválidos
+277. Verifique permissões em rotas dinâmicas
+278. Verifique comportamento em build
+279. Verifique erros de TypeScript
+280. Verifique tipagens fracas ou uso de `any`
+281. Evite `as` desnecessário
+282. Verifique tipos compartilhados com backend quando aplicável
+283. Verifique contrato de API
+284. Verifique compatibilidade com mudanças no backend
+285. Garanta tratamento para campos novos, ausentes ou removidos
+286. Revise validação de schema quando aplicável
+287. Verifique uso de Zod/Yup quando aplicável
+288. Verifique lint
+289. Verifique formatação
+290. Verifique padrões de commit/PR quando aplicável
+291. Revise documentação necessária
+292. Atualize Storybook quando aplicável
+293. Verifique stories para estados principais
+294. Verifique stories para estados de erro
+295. Verifique stories para estados vazios
+296. Verifique stories responsivas quando aplicável
+297. Identifique débitos técnicos criados
+298. Avalie se o débito está explícito e justificado
+299. Pergunte: “isso é fácil de evoluir?”
+300. Pergunte: “isso é fácil de remover se a hipótese estiver errada?”
+301. Pergunte: “isso pode quebrar algo existente?”
+302. Pergunte: “o que acontece se a API falhar?”
+303. Pergunte: “o que acontece se o usuário não tiver permissão?”
+304. Pergunte: “o que acontece se não houver dados?”
+305. Pergunte: “o que acontece em uma conexão lenta?”
+306. Pergunte: “o que acontece em mobile?”
+307. Pergunte: “o que acontece com leitor de tela?”
+308. Pergunte: “isso está seguro?”
+309. Pergunte: “isso está performático o suficiente?”
+310. Pergunte: “isso está claro para a próxima pessoa que mantiver?”
+311. Avalie o design da solução
+312. Verifique coesão entre componentes, hooks e módulos
+313. Verifique baixo acoplamento
+314. Garanta responsabilidade única
+315. Avalie extensibilidade da solução
+316. Verifique reutilização adequada
+317. Evite abstrações prematuras
+318. Garanta simplicidade no design
+319. Avalie se o fluxo está intuitivo
+320. Verifique organização lógica da interface
+321. Garanta separação clara entre UI, estado, efeitos e integração com API
+322. Avalie se o design facilita manutenção futura
+323. Verifique aderência aos padrões do time
+324. Avalie encapsulamento adequado
+325. Verifique dependências desnecessárias
+326. Garanta que a solução não esteja superengenheirada
+327. Avalie se a solução suporta evolução futura
+328. Verifique clareza na modelagem de tipos e contratos
+329. Garanta consistência arquitetural
+330. Avalie se a solução está adequada à complexidade do problema
+331. Garanta que o código esteja claro, acessível, seguro, performático e sustentável
+332. Avalie se a solução é over-engineering
+333. Avalie se existe repetição de código, possibilidade de utilizar enum e código legível 
+334. Avalie se a solução tem boa modularidade, acoplamento controlado entre componentes

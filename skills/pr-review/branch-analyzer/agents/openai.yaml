@@ -1,0 +1,4 @@
+interface:
+  display_name: "Branch Analyzer"
+  short_description: "Mapeia mudanças da branch e escreve relatório técnico."
+  default_prompt: "Analise a branch contra a base e gere docs/pr/<branch>/branch-analysis.md."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Plan"
+  short_description: "Quebra uma tarefa em branches, commits e PRs menores com estratégia de integração."
+  default_prompt: "Use pr-plan para propor um plano de PRs pequenos, revisáveis e seguros para integrar, priorizando PRs direto para main quando viável."
